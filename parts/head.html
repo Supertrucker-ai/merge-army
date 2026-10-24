@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="%%NAME%%">
+<meta name="theme-color" content="#1b2a6b">
+<meta name="format-detection" content="telephone=no">
+<title>%%NAME%%</title>
+<link rel="apple-touch-icon" href="%%ICON%%">
+<link rel="icon" type="image/png" href="%%ICON%%">
+<link rel="manifest" href="%%MANIFEST%%">
+<style>
+%%CSS%%
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="hud">
+    <div id="lvl"><span id="lvlN">Level 1</span><small id="lvlName">Moon</small></div>
+    <div id="army"><small>MY ARMY</small><b id="armyN">0</b></div>
+    <div id="coins"><i class="coin"></i><b id="coinN">0</b></div>
+  </div>
+  <div id="stage">
+    <canvas id="c" aria-label="Game"></canvas>
+    <button id="starBtn" class="hidden" aria-label="Math star">⭐<span>MATH!</span></button>
+    <div id="boostBadge" class="hidden">🚀 x2 BOOST <b id="boostT">10</b></div>
+    <div id="toast"></div>
+  </div>
+  <div id="bar">
+    <button id="buyBtn" class="big"><span class="t">Buy Spawner</span><span class="p"><i class="coin"></i><b id="buyCost">10</b></span></button>
+    <button id="upBtn" class="mid">⬆️<span>Upgrades</span></button>
+    <button id="mapBtn" class="sq" aria-label="Map">🗺️</button>
+    <button id="sndBtn" class="sq" aria-label="Sound">🔊</button>
+  </div>
+
+  <div id="ovTitle" class="ov">
+    <div class="panel title">
+      <div class="logo" id="logoName">Merge Army</div>
+      <div class="tag">Merge • Multiply • Win!</div>
+      <div class="rocket">🚀</div>
+      <button id="playBtn" class="cta">▶ PLAY</button>
+      <div class="row2"><button id="tUp" class="sec">⬆️ Upgrades</button><button id="tMap" class="sec">🗺️ Planets</button></div>
+      <div class="small">Made for Sullivan 🌍🚀</div>
+    </div>
+  </div>
+
+  <div id="ovWin" class="ov clear">
+    <div class="panel win">
+      <div class="big1">🎉 Level Complete! 🎉</div>
+      <div id="winSub" class="sub"></div>
+      <div id="winCoins" class="earn"></div>
+      <div id="winFact" class="fact"></div>
+      <button id="winNext" class="cta">Next Level ▶</button>
+      <button id="winUp" class="sec">⬆️ Upgrades</button>
+    </div>
+  </div>
+
+  <div id="ovLose" class="ov">
+    <div class="panel lose">
+      <div class="big1">Try again!</div>
+      <div class="sub">The wall got bonked! 💥 Nobody got hurt - they just did silly flips.</div>
+      <div id="loseCoins" class="earn"></div>
+      <button id="loseRetry" class="cta">↻ Try again</button>
+      <button id="loseUp" class="sec">⬆️ Upgrades</button>
+    </div>
+  </div>
+
+  <div id="ovUp" class="ov">
+    <div class="panel sheet">
+      <div class="sheetHead"><h2>Upgrades</h2><div class="cc"><i class="coin"></i><b id="upCoins">0</b></div><button id="upClose" class="x" aria-label="Close">✕</button></div>
+      <div class="list" id="upList"></div>
+    </div>
+  </div>
+
+  <div id="ovMap" class="ov">
+    <div class="panel sheet">
+      <div class="sheetHead"><h2>Planets &amp; Places</h2><button id="mapClose" class="x" aria-label="Close">✕</button></div>
+      <div class="list" id="mapList"></div>
+    </div>
+  </div>
+
+  <div id="ovQuiz" class="ov">
+    <div class="panel quiz">
+      <div class="qtag" id="qTag">⭐ Star Question!</div>
+      <div class="qtext" id="qText"></div>
+      <div class="qans" id="qAns"></div>
+      <div class="qmsg" id="qMsg"></div>
+      <button id="qSkip" class="sec">Skip</button>
+    </div>
+  </div>
+</div>
+<canvas id="fx"></canvas>
+<script>
+%%JS%%
+</script>
+</body>
+</html>
